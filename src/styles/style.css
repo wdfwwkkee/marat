@@ -1,0 +1,818 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #11181E;
+    padding: 0;
+    margin: 0;
+    min-width: 270px;
+    overflow-x: hidden;
+}
+
+textarea {
+    color: #FFF;
+    padding: 5px;
+    background: transparent;
+    width: 100%;
+    font-size: 25px;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid #2B3036;
+}
+
+input {
+    color: #FFF;
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid #2B3036;
+    padding: 5px;
+    font-size: 25px;
+
+}
+
+::placeholder {
+    color: #FFF;
+    font-family: 'Pridi', serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+a,
+li,
+ul,
+ol,
+button {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    color: #FFF;
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: #C3F307;
+}
+
+#green-txt {
+    color: #C8FA05;
+}
+
+
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+/*-----------------------------header-----------------------------*/
+
+.header {
+    margin-bottom: 100px;
+}
+
+
+.logo {
+    position: relative;
+}
+
+
+.logo img {
+    width: 51px;
+    height: 47px
+}
+
+.logo-btn {
+    padding: 8px 30px;
+}
+
+.logo-M {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+}
+
+.logo-T {
+    position: absolute;
+    top: 25%;
+    left: 37%;
+}
+
+.logo-L {
+    position: absolute;
+    top: 25%;
+    left: 49%;
+}
+
+.logo-K {
+    position: absolute;
+    top: 25%;
+    right: 25%;
+}
+
+
+#city {
+    color: #FFF;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    height: 27px;
+}
+
+.header-content {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-bar li a {
+    color: #FFF;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+/*-----------------------------hero-----------------------------*/
+
+.hero {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+
+}
+
+.hero-title {
+    width: 70%;
+}
+
+.hero-btn {
+    border-radius: 10px;
+    padding: 15px 25px;
+}
+
+.hero-main-txt {
+    flex: 1 0 50%;
+    color: #FFF;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/*-----------------------------statistics-----------------------------*/
+
+
+.statistics {
+    margin-bottom: 80px;
+}
+
+.statistics-list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 23px;
+}
+
+
+.statistics-item {
+    color: #FFF;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: inline;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background: #2B3036;
+    text-align: center;
+    grid-column: span 3;
+}
+
+
+/*-----------------------------car-park-----------------------------*/
+
+
+.car-park {
+    margin-bottom: 40px;
+}
+
+.car-park-content {
+    
+    position: relative;
+}
+
+.car-park-content::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 30px;
+    top: 35px;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background: url(../icon/car-park-icon.png);
+}
+
+.car-park-content::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: #C3F307;
+    right: 0;
+    top: 0;
+}
+
+.container-title {
+    text-align: center;
+    color: #C3F307;
+    text-align: center;
+    font-family: 'Pridi', serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 50px;
+}
+
+.cars-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
+}
+
+
+
+.car-item {
+    padding: 30px 12px 20px 20px;
+    display: flex;
+    align-items: center;
+    background: #2B3036;
+    gap: 10px;
+}
+
+.car-item:nth-child(-n + 4) {
+    grid-column: span 1;
+}
+
+.car-item:last-child {
+    grid-column: span 2;
+}
+
+.car-item:last-child {
+    gap: 30px;
+}
+
+.car-txt {
+    flex: 0 0 70%;
+}
+
+.car-txt-title a {
+    color: #FFF;
+    font-family: 'Pridi', serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.car-txt-desc {
+    color: #FFF;
+    font-family: 'Pridi', serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.car-img {
+    position: relative;
+    z-index: 2;
+}
+
+.car-img::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    z-index: -1;
+    top: -15%;
+    left: 20%;
+    background: #C3F307;
+    border-radius: 100%;
+}
+
+
+.car-item:last-child>.car-img::after {
+    content: none;
+}
+
+
+/*-----------------------------passenger-vehicles-----------------------------*/
+
+
+.passenger-vehicles {
+    margin-bottom: 100px;
+}
+
+
+.passenger-vehicles-txt {
+    flex: 0 0 70%;
+}
+
+
+.passenger-vehicles-park {
+    margin-bottom: 40px;
+}
+
+.passenger-vehicles-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
+}
+
+
+
+.passenger-vehicles-item {
+    padding: 30px 12px 20px 20px;
+    display: flex;
+    align-items: center;
+    background: #2B3036;
+    gap: 10px;
+}
+
+.passenger-vehicles-item:nth-child(-n + 4) {
+    grid-column: span 1;
+}
+
+.passenger-vehicles-item:last-child {
+    grid-column: span 2;
+}
+
+.passenger-vehicles-txt-title a {
+    color: #FFF;
+    font-family: 'Pridi', serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.passenger-vehicles-txt-desc {
+    color: #FFF;
+    font-family: 'Pridi', serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.passenger-vehicles-img {
+    position: relative;
+    z-index: 2;
+}
+
+.passenger-vehicles-img::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    z-index: -1;
+    top: -20%;
+    left: 20%;
+    background: #C3F307;
+    border-radius: 100%;
+}
+
+.passenger-vehicles-item:last-child {
+    gap: 30px;
+}
+
+.passenger-vehicles-item:last-child>.passenger-vehicles-img::after {
+    content: none;
+}
+
+
+
+/*-----------------------------about-----------------------------*/
+
+.about {
+    margin-bottom: 100px;
+}
+
+.about-title {
+    color: #FFF;
+    font-family: 'Pridi', serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 50px;
+}
+
+.about-item-txt-title {
+    color: #FFF;
+    font-family: 'Pridi', serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 10px;
+    
+}
+
+.about-item-txt-title-desc {
+    color: #FFF;
+    font-family: 'Pridi', serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.about-list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.about-item {
+    grid-column: span 3;
+    background: #2B3036;
+    padding: 10px 6px;
+}
+
+.about-item:first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.about-item-img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-item:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+
+/*-----------------------------promo-----------------------------*/
+
+
+.promo {
+    margin-bottom: 90px;
+}
+
+.promo-content {
+    border-radius: 20px;
+    background: #2B3036;
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    justify-content: space-between;
+}
+
+
+.promo-rent {
+    flex: 1 1 30%;
+}
+
+.promo-payment {
+    flex: 1 1 30%;
+}
+
+.promo-img {
+    flex: 1 1 40%;
+}
+
+.promo-rent,
+.promo-payment {
+    position: relative;
+    color: #FFF;
+    font-family: 'Pridi', serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.promo-img {
+    text-align: center;
+}
+
+
+
+.promo-payment {
+    text-align: start;
+}
+
+.promo-rent-icon,
+.promo-payment-icon {
+    display: inline;
+    border-radius: 100%;
+    padding: 12px 10px 0px 10px;
+    background-color: #D9D9D9;
+}
+
+
+.promo-rent span,
+.promo-payment span {
+    color: #FFF;
+    font-family: Pridi;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+
+.promo-rent {
+    display: inline;
+}
+
+
+
+
+
+/*-----------------------------feedback-----------------------------*/
+
+.feedback-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.feedback-img {
+    flex: 1 1 60%;
+}
+
+.feedback-title {
+    width: 50%;
+    color: #FFF;
+    font-family: 'Pridi', serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+.input-name,
+.input-email,
+.input-tel {
+    margin-bottom: 10px;
+}
+
+
+.input-name input,
+.input-email input,
+.input-tel input {
+    width: 100%;
+    height: 70px;
+}
+
+.input-text textarea {
+    resize: none;
+}
+
+
+
+@media (max-width: 1024px) {
+    .cars-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .car-item:nth-child(-n + 4) {
+        grid-column: span 2;
+    }
+
+    .passenger-vehicles-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .passenger-vehicles-item:nth-child(-n + 4) {
+        grid-column: span 2;
+    }
+    .passenger-vehicles-img::after {
+        top: -10%;
+    }
+
+    .feedback-img {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .hero-title {
+        width: 100%;
+    }
+    .promo-img {
+        display: none;
+    }
+    .promo-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        gap: 25px;
+    }
+    
+    .hero-img {
+        display: none;
+    }
+
+    .promo-rent {
+        padding-bottom: 25px;
+        border-bottom: 1px solid #11181E;
+    }
+
+    .promo-rent-icon,
+    .promo-payment-icon {
+        display: none;
+    }
+
+    .statistics-item {
+        grid-column: span 6;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .hero-main-txt {
+        font-size: 30px;
+        
+    }
+    .hero-title {
+        margin-bottom: 20px;
+    }
+    .car-park-content::after,
+    .car-park-content::before {
+        content: none;
+    }
+
+    .about-list {
+        gap: 15px;
+    }
+
+    .about-item {
+        padding: 5px 10px;
+        grid-column: span 6;
+    }
+    .about-item:first-child {
+        border-bottom-left-radius: 0px;
+    }
+    .about-item:nth-child(2) {
+        border-top-right-radius: 20px;
+    }
+    .about-item:nth-child(3) {
+        border-bottom-left-radius: 20px;
+    }
+    .about-item:last-child {
+        border-top-right-radius: 0px;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+}
+
+
+@media (max-width:450px) {
+
+    .hero  {
+        margin-bottom: 40px;
+    }
+    .statistics-item {
+        grid-column: span 12;
+    }
+    .statistics {
+        margin-bottom: 40px;
+    }
+
+    .container-title {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    .car-txt-title a,
+    .passenger-vehicles-txt-title a {
+        font-size: 15px;
+    }
+
+    .car-txt-desc,
+    .passenger-vehicles-txt-desc
+    {
+        font-size: 12px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+    .about-item {
+        grid-column: span 12;
+    }
+
+    .car-img::after {
+        top: -5%;
+    }
+
+
+    .passenger-vehicles-img::after {
+        top: -5%;
+    }
+
+
+    .feedback-title {
+        font-size: 25px;
+    }
+
+    .promo-rent,
+    .promo-payment {
+        font-size: 20px;
+    }
+
+    .promo-rent span,
+    .promo-payment span {
+        font-size: 20px;
+    }
+    
+    .about-item:first-child {
+        border-top-right-radius: 20px;
+    }
+    .about-item:nth-child(2) {
+        border-top-right-radius: 0px;
+    }
+    .about-item:nth-child(3) {
+        border-bottom-left-radius: 0px;
+    }
+    .about-item:last-child {
+        border-bottom-left-radius: 20px;
+    }
+
+    .about {
+        margin-bottom: 50px;
+    }
+
+    .promo {
+        margin-bottom: 45px;
+    }
+    .feedback-title {
+        width: 100%;
+    }
+}
