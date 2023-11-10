@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    transition: all .3s;
 }
 
 body {
@@ -77,6 +78,15 @@ button {
     font-weight: 700;
     line-height: normal;
     background: #C3F307;
+}
+
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.9);
 }
 
 #green-txt {
@@ -168,6 +178,21 @@ button {
     font-weight: 700;
     line-height: normal;
 }
+
+.nav-item:hover {
+    transform: translateY(-5px);
+    color: #C8FA05;
+}
+
+.nav-item a:hover {
+    color: #C8FA05;
+}
+
+.nav-item #city:hover {
+    color: #C8FA05;
+}
+
+
 
 
 /*-----------------------------hero-----------------------------*/
