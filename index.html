@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,7 +19,7 @@
     <header class="header">
         <div class="wrapper">
             <div class="header-content">
-                <div class="logo">
+                <div class="logo" data-aos="fade-right">
                     <a href="#">
                         <img src="src/icon/logo-icon.svg" alt="">
                         <span class="logo-M">
@@ -50,7 +52,7 @@
                         </span>
                     </a>
                 </div>
-                <nav class="nav">
+                <nav class="nav" data-aos="fade-up">
                     <ol class="nav-bar">
                         <li class="nav-item">
                             <a href="#">Услуги</a>
@@ -66,7 +68,7 @@
                         </li>
                     </ol>
                 </nav>
-                <div class="logo-button">
+                <div class="logo-button" data-aos="fade-left">
                     <button class="logo-btn">Вход</button>
                 </div>
             </div>
@@ -76,15 +78,15 @@
         <div class="wrapper">
             <div class="hero-content">
                 <div class="hero-main-txt">
-                    <div class="hero-title">
+                    <div class="hero-title" data-aos="fade-right">
                         Экономьте <span id="green-txt">до 70 % на попутной доставке</span> сборных грузов по России
                         и СНГ
                     </div>
-                    <div class="hero-button">
+                    <div class="hero-button" data-aos="fade-right">
                         <button class="hero-btn">Рассчитать стоимость</button>
                     </div>
                 </div>
-                <div class="hero-img">
+                <div class="hero-img" data-aos="fade-left">
                     <img src="src/img/hero/hero-car.png" alt="">
                 </div>
             </div>
@@ -94,19 +96,19 @@
         <div class="wrapper">
             <div class="statistics-content">
                 <ol class="statistics-list">
-                    <li class="statistics-item">
+                    <li class="statistics-item" data-aos="fade-right">
                         <div class="statistics-number" id="green-txt">150 000</div>
                         <div class="statistics-txt">тонн груза доставили</div>
                     </li>
-                    <li class="statistics-item">
+                    <li class="statistics-item" data-aos="fade-down">
                         <div class="statistics-number" id="green-txt">> 1 500</div>
                         <div class="statistics-txt">более 1 500 клиентов</div>
                     </li>
-                    <li class="statistics-item">
+                    <li class="statistics-item" data-aos="fade-down">
                         <div class="statistics-number" id="green-txt">100</div>
                         <div class="statistics-txt">сотрудников в штате</div>
                     </li>
-                    <li class="statistics-item">
+                    <li class="statistics-item" data-aos="fade-left">
                         <div class="statistics-number" id="green-txt">3</div>
                         <div class="statistics-txt">филиала в России</div>
                     </li>
@@ -117,11 +119,11 @@
     <section class="car-park">
         <div class="wrapper">
             <div class="car-park-content">
-                <div class="car-park-title container-title">
+                <div class="car-park-title container-title" data-aos="zoom-in">
                     Наш автопарк
                 </div>
                 <ol class="cars-list">
-                    <li class="car-item">
+                    <li class="car-item" data-aos="fade-down-right">
                         <div class="car-img">
                             <img src="src/img/car-park/car-1.png" alt="">
                         </div>
@@ -136,7 +138,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="car-item">
+                    <li class="car-item" data-aos="fade-down-left">
                         <div class="car-img">
                             <img src="src/img/car-park/car-1.png" alt="">
                         </div>
@@ -151,7 +153,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="car-item">
+                    <li class="car-item" data-aos="fade-up-right">
                         <div class="car-img">
                             <img src="src/img/car-park/car-2.png" alt="">
                         </div>
@@ -166,7 +168,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="car-item">
+                    <li class="car-item" data-aos="fade-up-left">
                         <div class="car-img">
                             <img src="src/img/car-park/car-2.png" alt="">
                         </div>
@@ -180,7 +182,7 @@
                                 От 20.000р за два рейса утро-вечер почасовая оплата от 950р час </div>
                         </div>
                     </li>
-                    <li class="car-item">
+                    <li class="car-item" data-aos="fade-up">
                         <div class="car-img">
                             <img src="src/img/car-park/car-3.png" alt="">
                         </div>
@@ -202,11 +204,11 @@
     <section class="passenger-vehicles">
         <div class="wrapper">
             <div class="passenger-vehicles-content">
-                <div class="passenger-vehicles-title container-title">
+                <div class="passenger-vehicles-title container-title" data-aos="zoom-in">
                     Легковые автомобили:
                 </div>
                 <ol class="passenger-vehicles-list">
-                    <li class="passenger-vehicles-item">
+                    <li class="passenger-vehicles-item" data-aos="fade-down-right">
                         <div class="passenger-vehicles-img">
                             <img src="src/img/passenger-vehicles/car-1.png" alt="">
                         </div>
@@ -221,7 +223,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="passenger-vehicles-item">
+                    <li class="passenger-vehicles-item" data-aos="fade-down-left">
                         <div class="passenger-vehicles-img">
                             <img src="src/img/passenger-vehicles/car-2.png" alt="">
                         </div>
@@ -236,7 +238,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="passenger-vehicles-item">
+                    <li class="passenger-vehicles-item" data-aos="fade-up-right">
                         <div class="passenger-vehicles-img">
                             <img src="src/img/passenger-vehicles/car-3.png" alt="">
                         </div>
@@ -251,7 +253,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="passenger-vehicles-item">
+                    <li class="passenger-vehicles-item" data-aos="fade-up-left">
                         <div class="passenger-vehicles-img">
                             <img src="src/img/passenger-vehicles/car-4.png" alt="">
                         </div>
@@ -266,7 +268,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="passenger-vehicles-item">
+                    <li class="passenger-vehicles-item" data-aos="fade-up">
                         <div class="passenger-vehicles-img">
                             <img src="src/img/passenger-vehicles/car-5.png" alt="">
                         </div>
@@ -289,11 +291,11 @@
     <section class="about">
         <div class="wrapper">
             <div class="about-content">
-                <div class="about-title">
+                <div class="about-title" data-aos="zoom-in">
                     Мы <span id="green-txt">ценим</span> время и комфорт <span id="green-txt">своих клиентов</span>
                 </div>
                 <ol class="about-list">
-                    <li class="about-item">
+                    <li class="about-item" data-aos="fade-right">
                         <div class="about-item-img">
                             <img src="src/img/about/about-1.png" alt="">
                         </div>
@@ -306,7 +308,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="about-item">
+                    <li class="about-item" data-aos="fade-up">
                         <div class="about-item-img">
                             <img src="src/img/about/about-2.png" alt="">
                         </div>
@@ -319,7 +321,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="about-item">
+                    <li class="about-item" data-aos="fade-up">
                         <div class="about-item-img">
                             <img src="src/img/about/about-3.png" alt="">
                         </div>
@@ -332,7 +334,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="about-item">
+                    <li class="about-item" data-aos="fade-left">
                         <div class="about-item-img">
                             <img src="src/img/about/about-4.png" alt="">
                         </div>
@@ -349,10 +351,126 @@
             </div>
         </div>
     </section>
+    <section class="review">
+        <div class="wrapper">
+            <div class="review-content">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide reviewSlide">
+                            <div class="review-header">
+                                <div class="review-img">
+                                    <img src="src/review/img.jpeg" alt="">
+                                </div>
+                                <div class="review-name">
+                                    Alexander.R.S
+                                </div>
+                            </div>
+                            <div class="review-txt">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit provident maxime facilis
+                                sed voluptates sint quam facere, fugit minus. Quos.
+                            </div>
+                            <div class="review-stars">
+                                <img src="src/icon/stars.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide reviewSlide">
+                            <div class="review-header">
+                                <div class="review-img">
+                                    <img src="src/review/img.jpeg" alt="">
+                                </div>
+                                <div class="review-name">
+                                    Alexander.R.S
+                                </div>
+                            </div>
+                            <div class="review-txt">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit provident maxime facilis
+                                sed voluptates sint quam facere, fugit minus. Quos.
+                            </div>
+                            <div class="review-stars">
+                                <img src="src/icon/stars.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide reviewSlide">
+                            <div class="review-header">
+                                <div class="review-img">
+                                    <img src="src/review/img.jpeg" alt="">
+                                </div>
+                                <div class="review-name">
+                                    Alexander.R.S
+                                </div>
+                            </div>
+                            <div class="review-txt">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit provident maxime facilis
+                                sed voluptates sint quam facere, fugit minus. Quos.
+                            </div>
+                            <div class="review-stars">
+                                <img src="src/icon/stars.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide reviewSlide">
+                            <div class="review-header">
+                                <div class="review-img">
+                                    <img src="src/review/img.jpeg" alt="">
+                                </div>
+                                <div class="review-name">
+                                    Alexander.R.S
+                                </div>
+                            </div>
+                            <div class="review-txt">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit provident maxime facilis
+                                sed voluptates sint quam facere, fugit minus. Quos.
+                            </div>
+                            <div class="review-stars">
+                                <img src="src/icon/stars.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide reviewSlide">
+                            <div class="review-header">
+                                <div class="review-img">
+                                    <img src="src/review/img.jpeg" alt="">
+                                </div>
+                                <div class="review-name">
+                                    Alexander.R.S
+                                </div>
+                            </div>
+                            <div class="review-txt">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit provident maxime facilis
+                                sed voluptates sint quam facere, fugit minus. Quos.
+                            </div>
+                            <div class="review-stars">
+                                <img src="src/icon/stars.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide reviewSlide">
+                            <div class="review-header">
+                                <div class="review-img">
+                                    <img src="src/review/img.jpeg" alt="">
+                                </div>
+                                <div class="review-name">
+                                    Alexander.R.S
+                                </div>
+                            </div>
+                            <div class="review-txt">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit provident maxime facilis
+                                sed voluptates sint quam facere, fugit minus. Quos.
+                            </div>
+                            <div class="review-stars">
+                                <img src="src/icon/stars.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-navigation">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="promo">
         <div class="wrapper">
-            <div class="promo-content">
-                <div class="promo-rent">
+            <div class="promo-content" data-aos="fade-up">
+                <div class="promo-rent" data-aos="fade-right">
                     <div class="promo-rent-icon">
                         <img src="src/icon/rent-icon.png" alt="">
                     </div>
@@ -363,7 +481,7 @@
                 <div class="promo-img">
                     <img src="src/img/promo/promo-1.png" alt="">
                 </div>
-                <div class="promo-payment">
+                <div class="promo-payment" data-aos="fade-left">
                     <div class="promo-payment-icon">
                         <img src="src/icon/payment-icon.png" alt="">
                     </div>
@@ -377,24 +495,24 @@
     <section class="feedback">
         <div class="wrapper">
             <div class="feedback-content">
-                <div class="feedback-img">
+                <div class="feedback-img" data-aos="fade-right">
                     <img src="src/img/feedback/feedback-1.png" alt="">
                 </div>
-                <div class="feedback-form">
+                <div class="feedback-form" data-aos="fade-left">
                     <form class="feedback-form" name="feedback" action="#" method="POST">
-                        <div class="feedback-title">
+                        <div class="feedback-title" data-aos="fade-down">
                             Остались вопросы? Задайте их нашему менеджеру
                         </div>
-                        <div class="input-name">
+                        <div class="input-name" data-aos="fade-left">
                             <input name="name" placeholder="Ваше имя" type="text" required="required">
                         </div>
-                        <div class="input-email">
+                        <div class="input-email" data-aos="fade-left">
                             <input name="email" placeholder="E-mail" type="email" required="required">
                         </div>
-                        <div class="input-tel">
+                        <div class="input-tel" data-aos="fade-left">
                             <input name="tel" placeholder="Телефон" type="tel" required="required">
                         </div>
-                        <div class="input-text">
+                        <div class="input-text" data-aos="fade-left">
                             <textarea name="message" placeholder="Ваше сообщение"></textarea>
                         </div>
                     </form>
@@ -402,6 +520,12 @@
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="src/scripts/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
