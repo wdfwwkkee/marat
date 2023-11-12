@@ -194,6 +194,12 @@ button:active {
     color: #C8FA05;
 }
 
+.nav-item:last-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .nav-item a:hover {
     color: #C8FA05;
 }
@@ -230,7 +236,7 @@ button:active {
 .modalReg-content {
     position: relative;
     width: 560px;
-    height: 810px;
+    min-height: 500px;
     padding: 45px;
     padding: 50px;
     z-index: 1;
@@ -329,9 +335,7 @@ button:active {
     gap: 5px;
 }
 
-.checkboxModal {
-    background: transparent;
-}
+
 
 .modal-passwrod a,
 .checkbox-modal-txt {
@@ -374,9 +378,11 @@ button:active {
     opacity: 0;
     position: absolute;
     z-index: 5;
+    width: 23px;
+    height: 23px;
 }
 
-.checkboxModal:checked + .custom-checkbox::after {
+.checkboxModal:checked+.custom-checkbox::after {
     transform: translate(-50%, -50%) scale(1);
 
 }
@@ -385,6 +391,58 @@ button:active {
 .modal-passwrod:hover {
     transform: translateY(-5px);
 }
+
+
+.tab-content {
+    display: none;
+}
+
+.tab_btn.active {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #C8FA05;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.input-Reg-btn-modal {
+    cursor: pointer;
+    color: #000;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 20px;
+    padding: 27px 20px 27px 10px;
+    background-color: #C8FA05;
+    border: 1px solid #FFF;
+    max-width: 40%;
+    align-self: center;
+}
+
+.modal-Reg-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.modal-Reg-form div input {
+    border: 1px solid #C3F307;
+    height: 62px;
+    width: 100%;
+}
+
+.modal-Reg-form div input::placeholder {
+    color: #A0A0A0;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
 
 /*-----------------------------hero-----------------------------*/
 
@@ -416,6 +474,23 @@ button:active {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+
+.hero-button {
+    display: flex;
+    gap: 30px;
+}
+
+.order-btn {
+    background: #2B3036;
+    color: #FFF;
+    font-family: Pridi;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-inline: 42px;
 }
 
 /*-----------------------------statistics-----------------------------*/

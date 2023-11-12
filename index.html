@@ -66,7 +66,12 @@
                             <a href="#">Контакты</a>
                         </li>
                         <li class="nav-item">
-                            <a id="city" href="#">Альметьевск</a>
+                            <div class="nav-city-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 12" fill="none">
+                                    <path d="M-2.54292e-07 4C-6.11631e-08 1.79086 2.01472 3.43001e-07 4.5 5.60272e-07C6.98528 7.77542e-07 9 1.79086 9 4C9 6.20914 4.5 12 4.5 12C4.5 12 -4.47421e-07 6.20914 -2.54292e-07 4Z" fill="#B6DC06"/>
+                                  </svg>
+                            </div>
+                            <a id="city" href="#">Россия</a>
                         </li>
                     </ol>
                 </nav>
@@ -90,34 +95,58 @@
                         </button>
                         <div class="modal-title">
                             <div class="modal-title-signIn">
-                                <button>Вход</button>
+                                <button class="tab_btn active">Вход</button>
                             </div>
                             <div class="modal-title-signUp">
-                                <button>Регестрация</button>
+                                <button class="tab_btn">Регистрация</button>
                             </div>
                         </div>
-                        <div class="modal-form-input">
-                            <form class="modal-form" name="modalForm" action="#" method="POST">
-                                <div class="input-email-modal" data-aos="fade-left">
-                                    <input name="email" placeholder="Почта" type="email" required="required">
-                                </div>
-                                <div class="input-password-modal" data-aos="fade-left">
-                                    <input name="password" placeholder="Пароль" type="password" required="required">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-checkbox">
-                            <div class="checkbox-modal">
-                                <div class="checkboxSelf">
-                                    <input class="checkboxModal" type="checkbox" name="checkbox">
-                                    <span class="custom-checkbox"></span>
-                                    <div class="checkbox-modal-txt">
-                                        Сохранить пароль
+                        <div class="tab-content active">
+                            <div class="modal-form-input">
+                                <form class="modal-form" name="modalForm" action="#" method="POST">
+                                    <div class="input-email-modal" data-aos="fade-left">
+                                        <input name="email" placeholder="Почта" type="email" required="required">
+                                    </div>
+                                    <div class="input-password-modal" data-aos="fade-left">
+                                        <input name="password" placeholder="Пароль" type="password" required="required">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-checkbox">
+                                <div class="checkbox-modal">
+                                    <div class="checkboxSelf">
+                                        <input class="checkboxModal" type="checkbox" name="checkbox">
+                                        <span class="custom-checkbox"></span>
+                                        <div class="checkbox-modal-txt">
+                                            Сохранить пароль
+                                        </div>
+                                    </div>
+                                    <div class="modal-passwrod">
+                                        <a href="#">Забыли пароль?</a>
                                     </div>
                                 </div>
-                                <div class="modal-passwrod">
-                                    <a href="#">Забыли пароль?</a>
-                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="modal-Reg-form-input">
+                                <form class="modal-Reg-form" name="modalRegForm" action="#" method="POST">
+                                    <div class="input-Reg-name-modal" data-aos="fade-left">
+                                        <input name="Modalname" placeholder="Имя" type="text" required="required">
+                                    </div>
+                                    <div class="input-Reg-surname-modal" data-aos="fade-left">
+                                        <input name="name" placeholder="Фамилия" type="text" required="required">
+                                    </div>
+                                    <div class="input-Reg-email-modal" data-aos="fade-left">
+                                        <input name="email" placeholder="Почта" type="email" required="required">
+                                    </div>
+                                    <div class="input-Reg-name-modal" data-aos="fade-left">
+                                        <input name="password" placeholder="Пароль" type="password" required="required">
+                                    </div>
+                                    <div class="input-Reg-name-modal" data-aos="fade-left">
+                                        <input name="password" placeholder="Повторите пароль" type="password" required="required">
+                                    </div>
+                                    <input class="input-Reg-btn-modal" type="submit" name="submit_btn" value="Регистрация">
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -133,7 +162,8 @@
                         и СНГ
                     </div>
                     <div class="hero-button" data-aos="fade-right">
-                        <button class="hero-btn">Рассчитать стоимость</button>
+                        <button class="hero-btn count-btn">Рассчитать стоимость</button>
+                        <button class="hero-btn order-btn">Заказать</button>
                     </div>
                 </div>
                 <div class="hero-img" data-aos="fade-left">
@@ -536,7 +566,7 @@
                         <img src="src/icon/payment-icon.png" alt="">
                     </div>
                     <div class="promo-payment-txt">
-                        Оплата производится <span>удобным дня заказчика спасобом</span>
+                        Оплата производится <span>удобным дня заказчика способом</span>
                     </div>
                 </div>
             </div>
