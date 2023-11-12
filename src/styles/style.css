@@ -1,8 +1,12 @@
 html {
     scroll-behavior: smooth;
-
     overflow-x: hidden;
 }
+
+html.lock {
+    overflow: hidden;
+}
+
 
 * {
     padding: 0;
@@ -16,6 +20,7 @@ body {
     padding: 0;
     margin: 0;
     min-width: 270px;
+    overflow-x: hidden;
 }
 
 textarea {
@@ -198,7 +203,188 @@ button:active {
 }
 
 
+/*-----------------------------modal-Reg-----------------------------*/
 
+
+.modalReg {
+    font-family: Inter;
+    position: fixed;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .3);
+    opacity: 1;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s;
+}
+
+
+
+.modalReg-content {
+    position: relative;
+    width: 560px;
+    height: 810px;
+    padding: 45px;
+    padding: 50px;
+    z-index: 1;
+    border-radius: 10px;
+    background: #11181E;
+    transform: scale(0);
+}
+
+.modalReg.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modalReg.open .modalReg-content {
+    transform: scale(1);
+}
+
+.modal-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: transparent;
+}
+
+.modal-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.modal-title-signIn {
+    position: relative;
+}
+
+.modal-title-signIn::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: -11px;
+    width: 2px;
+    height: 34px;
+    background: #C3F307;
+}
+
+.modal-title-signIn button,
+.modal-title-signUp button {
+    background: transparent;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 146.023%;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-email-modal input,
+.input-password-modal input {
+    border: 1px solid #C3F307;
+    height: 62px;
+    width: 100%;
+}
+
+.modal-form-input {
+    margin-bottom: 50px;
+}
+
+.input-email-modal input::placeholder,
+.input-password-modal input::placeholder {
+    color: #A0A0A0;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+
+.checkbox-modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkboxSelf {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.checkboxModal {
+    background: transparent;
+}
+
+.modal-passwrod a,
+.checkbox-modal-txt {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 146.023%;
+}
+
+.custom-checkbox {
+    position: relative;
+    width: 23px;
+    height: 23px;
+    border-radius: 7.116px;
+    border: 2px solid #FFF;
+    background: transparent;
+}
+
+.custom-checkbox::before {
+    content: "";
+}
+
+.custom-checkbox::after {
+    content: "";
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url(../icon/check-mark.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.checkboxModal {
+    opacity: 0;
+    position: absolute;
+    z-index: 5;
+}
+
+.checkboxModal:checked + .custom-checkbox::after {
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+
+.modal-passwrod:hover {
+    transform: translateY(-5px);
+}
 
 /*-----------------------------hero-----------------------------*/
 
