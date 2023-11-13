@@ -15,6 +15,35 @@ const closeModalButton = document.getElementById("close-modal-btn");
 const html = document.getElementById("html");
 const tabButton = document.querySelectorAll(".tab_btn");
 const all_content = document.querySelectorAll(".tab-content");
+const orderButton = document.getElementById("orderButton");
+const orderModal = document.querySelector(".order-modal");
+const orderCloseModal = document.getElementById('close-modal-order-btn');
+const priceButton = document.getElementById('priceButton');
+const priceModal = document.querySelector('.price-modal');
+const closePriceModal = document.getElementById('close-price-modal-order-btn');
+
+
+
+
+
+
+
+priceButton.addEventListener('click', () => {
+  priceModal.classList.add('open');
+  html.classList.add("lock");
+})
+
+closePriceModal.addEventListener("click", ()=> {
+  priceModal.classList.remove("open");
+  html.classList.remove("lock");
+})
+
+
+orderButton.addEventListener('click', () => {
+  orderModal.classList.add('open');
+  html.classList.add("lock");
+})
+
 
 tabButton.forEach((tab, index)=> {
   tab.addEventListener('click', (e)=> {
@@ -36,5 +65,11 @@ closeModalButton.addEventListener("click", function() {
   modalReg.classList.remove("open");
   html.classList.remove("lock");
 })
+
+orderCloseModal.addEventListener('click', ()=> {
+  orderModal.classList.remove('open');
+  html.classList.remove('lock');
+})
+
 
 

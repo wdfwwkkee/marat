@@ -209,6 +209,23 @@ button:active {
 }
 
 
+.city-select {
+    background: #11181E;
+    border: none;
+    appearance: none;
+    color: #FFF;
+    font-family: 'Source Sans 3';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.city-select option {
+    padding: 30px;
+}
+
+
 /*-----------------------------modal-Reg-----------------------------*/
 
 
@@ -232,11 +249,19 @@ button:active {
 }
 
 
+.input-login-btn-modal:hover {
+    transform: scale(1.05);
+}
+
+.input-login-btn-modal:active {
+    transform: scale(1);
+}
+
 
 .modalReg-content {
     position: relative;
     width: 560px;
-    min-height: 500px;
+    min-height: 610px;
     padding: 45px;
     padding: 50px;
     z-index: 1;
@@ -406,7 +431,8 @@ button:active {
     display: block;
 }
 
-.input-Reg-btn-modal {
+.input-Reg-btn-modal,
+.input-login-btn-modal {
     cursor: pointer;
     color: #000;
     font-family: Inter;
@@ -421,6 +447,22 @@ button:active {
     max-width: 40%;
     align-self: center;
 }
+
+
+.input-login-btn-modal {
+    position: absolute;
+    padding: 20px 27px;
+    bottom: 15%;
+}
+
+.input-Reg-btn-modal:hover {
+    transform: scale(1.05);
+}
+
+.input-Reg-btn-modal:active {
+    transform: scale(1);
+}
+
 
 .modal-Reg-form {
     display: flex;
@@ -491,6 +533,299 @@ button:active {
     font-weight: 700;
     line-height: normal;
     padding-inline: 42px;
+}
+
+
+/*-----------------------------order-modal-----------------------------*/
+
+
+.order-modal {
+    font-family: 'Source Sans 3';
+    position: fixed;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .3);
+    opacity: 1;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s;
+}
+
+.order-modal-content {
+    position: relative;
+    width: 700px;
+    min-height: 573px;
+    padding: 35px 55px;
+    z-index: 1;
+    border-radius: 10px;
+    background: #11181E;
+    transform: scale(0);
+}
+
+
+.order-modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.order-modal.open .order-modal-content {
+    transform: scale(1);
+}
+
+
+.order-title {
+    margin-bottom: 50px;
+    display: flex;
+    color: #FFF;
+    align-items: center;
+    gap: 20px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.order-title-desc {
+    color: #656565;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.input-order-title {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.modal-order-form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+
+}
+
+.input-order {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-column: span 6;
+}
+
+.input-order input {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #C8FA05;
+    background: #2B3036;
+}
+
+
+
+
+.input-order input::placeholder {
+    color: #A0A0A0;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.modal_btn {
+    position: absolute;
+    width: 90%;
+    cursor: pointer;
+    bottom: 80px;
+    padding: 20px 0px;
+    border-radius: 50px;
+    left: 40px;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: #C8FA05;
+}
+
+.modal_btn:hover {
+    transform: scale(1.05);
+}
+
+.modal_btn:active {
+    transform: scale(1);
+}
+
+
+.classAuto-order,
+.location-order,
+.price-classAuto-price,
+.price-regular,
+.where-price {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #C8FA05;
+    appearance: none;
+    background: #2B3036;
+    color: #7D7D7D;
+    font-family: Pridi;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+}
+
+
+
+
+.select-location-wrapper,
+.select-classAuto-wrapper {
+    position: relative;
+}
+
+.select-location-wrapper::after,
+.select-classAuto-wrapper::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    width: 25px;
+    height: 15px;
+    background: url(../icon/selectArrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.data-agreement {
+    width: 90%;
+    position: absolute;
+    bottom: 30px;
+    color: rgba(255, 255, 255, 0.30);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/*-----------------------------price-modal-----------------------------*/
+
+.price-modal {
+    font-family: 'Source Sans 3';
+    position: fixed;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .3);
+    opacity: 1;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s;
+}
+
+.price-modal-content {
+    position: relative;
+    width: 700px;
+    min-height: 573px;
+    padding: 35px 55px;
+    z-index: 1;
+    border-radius: 10px;
+    background: #11181E;
+    transform: scale(0);
+}
+
+
+.price-modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.price-modal.open .price-modal-content {
+    transform: scale(1);
+}
+
+
+.modal-price-form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+
+}
+
+
+.price-modal-title {
+    margin-bottom: 50px;
+    display: flex;
+    color: #FFF;
+    align-items: center;
+    gap: 20px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.classAuto-order,
+.location-order {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #C8FA05;
+    appearance: none;
+    background: #2B3036;
+    color: #7D7D7D;
+    font-family: Pridi;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+}
+
+
+.select-price-classAuto-wrapper,
+.select-price-regular-wrapper,
+.select-where-wrapper,
+.select-location-wrapper,
+.select-classAuto-wrapper {
+    position: relative;
+    display: flex;
+}
+
+.select-price-classAuto-wrapper::after,
+.select-price-regular-wrapper::after,
+.select-where-wrapper::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    width: 25px;
+    height: 15px;
+    background: url(../icon/selectArrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 /*-----------------------------statistics-----------------------------*/
