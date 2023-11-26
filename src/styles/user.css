@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .3s;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-width: 270px;
+    overflow-x: hidden;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+a {
+    color: #FFF;
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+
+/*-----------------header------------------------*/
+
+
+
+.header {
+    background: #11181E;
+}
+
+/*-----------------main------------------------------*/
+
+
+
+.main {
+    background: #2B3036;
+    color: #FFF;
+    font-family: Playfair Display;
+    font-size: 25px;
+    font-style: normal;
+    line-height: normal;
+}
+
+
+caption {
+    font-weight: 700;
+}
+
+.table,
+thead,
+th,
+td {
+    border: none!important;
+    font-size: 20px;
+    color: #FFFFFF!important;
+    background-color: transparent!important;
+}
+
+
+.title-col {
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.title-col::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 1px;
+    height: 210px;
+    background: rgba(255, 255, 255, 0.30);
+}
+
+.table>:not(caption)>*>* {
+    text-align: center;
+}
+
+#status-select {
+    cursor: pointer;
+    width: 50%;
+    background: #2B3036;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-family: "Source Sans 3";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: 1px solid ;
+}
+
+
+thead {
+    margin-bottom: 20px;
+} 
+
+th {
+    padding: 20px!important;
+}
