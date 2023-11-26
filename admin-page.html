@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin-page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:wght@700&family=Pridi:wght@400;700&family=Source+Sans+3:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/admin-page.css">
+</head>
+
+<body id="body" class="body">
+    <header class="header">
+        <div class="wrapper">
+            <div class="header-content">
+                <div class="logo" data-aos="fade-right">
+                    <a href="#">
+                        <img src="src/icon/logo-icon.svg" alt="">
+                        <span class="logo-M">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                                <path
+                                    d="M7 0V0.196353C6.79839 0.202898 6.64422 0.229079 6.53748 0.274895C6.43668 0.314166 6.36849 0.392707 6.33291 0.510519C6.29733 0.621786 6.27954 0.798503 6.27954 1.04067V5.91024C6.27954 6.14586 6.29733 6.32258 6.33291 6.44039C6.36849 6.5582 6.43668 6.63675 6.53748 6.67602C6.64422 6.71529 6.79839 6.74147 7 6.75456V6.95091C6.86362 6.93782 6.69166 6.93128 6.48412 6.93128C6.28251 6.92473 6.07793 6.92146 5.87039 6.92146C5.63913 6.92146 5.4227 6.92473 5.22109 6.93128C5.01948 6.93128 4.85642 6.93782 4.73189 6.95091V6.75456C4.9335 6.74147 5.08471 6.71529 5.18551 6.67602C5.29225 6.63675 5.3634 6.5582 5.39898 6.44039C5.43456 6.32258 5.45235 6.14586 5.45235 5.91024V0.510519L5.48793 0.539972L3.30877 7H3.16645L0.925032 0.628331V5.81206C0.925032 6.04769 0.942821 6.23422 0.978399 6.37167C1.01991 6.50257 1.09699 6.59748 1.20966 6.65638C1.32825 6.70874 1.50318 6.74147 1.73443 6.75456V6.95091C1.6277 6.93782 1.48835 6.93128 1.31639 6.93128C1.14443 6.92473 0.981364 6.92146 0.827192 6.92146C0.67895 6.92146 0.527742 6.92473 0.373571 6.93128C0.225328 6.93128 0.100805 6.93782 0 6.95091V6.75456C0.201609 6.74147 0.352817 6.70874 0.453621 6.65638C0.560356 6.59748 0.631512 6.50257 0.66709 6.37167C0.702668 6.23422 0.720457 6.04769 0.720457 5.81206V1.04067C0.720457 0.798503 0.702668 0.621786 0.66709 0.510519C0.631512 0.392707 0.560356 0.314166 0.453621 0.274895C0.352817 0.229079 0.201609 0.202898 0 0.196353V0C0.100805 0.00654503 0.225328 0.0130904 0.373571 0.0196355C0.527742 0.0261805 0.67895 0.0294528 0.827192 0.0294528C0.957645 0.0294528 1.09106 0.0261805 1.22745 0.0196355C1.36976 0.0130904 1.48835 0.00654503 1.58323 0L3.60229 5.87097L3.45108 5.94951L5.45235 0.0294528C5.52351 0.0294528 5.5917 0.0294528 5.65692 0.0294528C5.72808 0.0294528 5.79924 0.0294528 5.87039 0.0294528C6.07793 0.0294528 6.28251 0.0261805 6.48412 0.0196355C6.69166 0.0130904 6.86362 0.00654503 7 0Z"
+                                    fill="#C8FA05" />
+                            </svg>
+                        </span>
+                        <span class="logo-T">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                                <path
+                                    d="M6 0C5.97158 0.250471 5.95027 0.494351 5.93606 0.731639C5.92895 0.962335 5.9254 1.1403 5.9254 1.26554C5.9254 1.42373 5.92895 1.57203 5.93606 1.71045C5.94316 1.84887 5.95027 1.97081 5.95737 2.07627H5.71226C5.66252 1.61488 5.59503 1.25235 5.50977 0.9887C5.42451 0.718455 5.27531 0.524011 5.06217 0.405367C4.84902 0.286723 4.51865 0.227401 4.07105 0.227401H3.49556V5.85311C3.49556 6.11676 3.52043 6.3145 3.57016 6.44633C3.627 6.57815 3.73357 6.66714 3.88988 6.71328C4.04618 6.75942 4.27353 6.78908 4.57194 6.80226V7C4.38721 6.98682 4.15275 6.98023 3.86856 6.98023C3.58437 6.97363 3.29663 6.97034 3.00533 6.97034C2.68561 6.97034 2.38366 6.97363 2.09947 6.98023C1.82238 6.98023 1.59858 6.98682 1.42806 7V6.80226C1.72647 6.78908 1.95382 6.75942 2.11013 6.71328C2.26643 6.66714 2.36945 6.57815 2.41918 6.44633C2.47602 6.3145 2.50444 6.11676 2.50444 5.85311V0.227401H1.92895C1.48846 0.227401 1.15808 0.286723 0.937834 0.405367C0.72469 0.524011 0.575488 0.718455 0.490231 0.9887C0.404973 1.25235 0.337478 1.61488 0.287745 2.07627H0.0426291C0.0568387 1.97081 0.0639436 1.84887 0.0639436 1.71045C0.0710484 1.57203 0.0746009 1.42373 0.0746009 1.26554C0.0746009 1.1403 0.0674959 0.962335 0.0532863 0.731639C0.0461815 0.494351 0.0284192 0.250471 0 0C0.298401 0.00659125 0.62167 0.0131829 0.969805 0.0197741C1.32505 0.0263654 1.68028 0.0296608 2.03552 0.0296608C2.39076 0.0296608 2.71403 0.0296608 3.00533 0.0296608C3.29663 0.0296608 3.61634 0.0296608 3.96448 0.0296608C4.31972 0.0296608 4.67496 0.0263654 5.0302 0.0197741C5.38544 0.0131829 5.7087 0.00659125 6 0Z"
+                                    fill="#C8FA05" />
+                            </svg>
+                        </span>
+                        <span class="logo-L">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                                <path
+                                    d="M6 0V0.193906C5.79045 0.200369 5.6302 0.226224 5.51926 0.271468C5.41448 0.31025 5.34361 0.387812 5.30663 0.504155C5.26965 0.614035 5.25116 0.78855 5.25116 1.0277V5.83656C5.25116 6.06925 5.26965 6.24377 5.30663 6.36011C5.34361 6.47645 5.41448 6.55402 5.51926 6.5928C5.6302 6.63158 5.79045 6.65743 6 6.67036V6.86427C5.87057 6.85134 5.70108 6.84487 5.49153 6.84487C5.28197 6.83841 5.05701 6.83518 4.81664 6.83518C4.57011 6.83518 4.32049 6.83841 4.0678 6.84487C3.82126 6.84487 3.61787 6.85134 3.45763 6.86427V6.67036C3.71649 6.65743 3.91371 6.63158 4.04931 6.5928C4.1849 6.55402 4.27427 6.47645 4.31741 6.36011C4.36672 6.24377 4.39137 6.06925 4.39137 5.83656V1.0277C4.39137 0.78855 4.37288 0.610803 4.3359 0.49446C4.29892 0.378117 4.22496 0.300554 4.11402 0.261772C4.00924 0.216528 3.85208 0.193906 3.64253 0.193906H3.52234C3.30662 0.193906 3.14638 0.216528 3.0416 0.261772C2.94299 0.300554 2.87827 0.381348 2.84746 0.504155C2.81664 0.620499 2.79199 0.795014 2.7735 1.0277C2.74268 1.40905 2.71186 1.81948 2.68105 2.259C2.65639 2.69852 2.6225 3.14127 2.57935 3.58726C2.54237 4.03324 2.48382 4.45983 2.4037 4.86704C2.32357 5.27424 2.2188 5.63943 2.08937 5.9626C1.95994 6.27932 1.79353 6.53139 1.59014 6.71884C1.38675 6.90628 1.13713 7 0.841294 7C0.637904 7 0.446841 6.95152 0.268104 6.85457C0.0893679 6.75115 0 6.57987 0 6.34072C0 6.17267 0.0523872 6.04017 0.157164 5.94321C0.26194 5.8398 0.391371 5.78809 0.545455 5.78809C0.681048 5.78809 0.791987 5.82687 0.878274 5.90443C0.970724 5.98199 1.01695 6.08541 1.01695 6.21468C1.01695 6.35688 0.983051 6.47322 0.915254 6.56371C0.847457 6.64774 0.748844 6.72853 0.619414 6.80609C0.662557 6.81256 0.702619 6.81579 0.739599 6.81579C0.782742 6.81579 0.81664 6.81579 0.841294 6.81579C1.12481 6.81579 1.36209 6.70268 1.55316 6.47645C1.74422 6.25023 1.8983 5.94321 2.01541 5.5554C2.13867 5.16113 2.23421 4.71514 2.302 4.21745C2.3698 3.71976 2.42219 3.19945 2.45917 2.65651C2.49615 2.10711 2.53005 1.56417 2.56086 1.0277C2.57935 0.801477 2.57011 0.630194 2.53313 0.51385C2.50231 0.397507 2.42835 0.316713 2.31125 0.271468C2.20031 0.226224 2.0339 0.200369 1.81202 0.193906V0C1.94145 0.00646344 2.09553 0.0129273 2.27427 0.0193907C2.453 0.0258542 2.61633 0.0290857 2.76425 0.0290857C2.90601 0.0290857 3.0416 0.0258542 3.17103 0.0193907C3.30663 0.00646383 3.44222 0 3.57781 0C3.81202 0 4.02465 0.00646383 4.21572 0.0193907C4.40678 0.0258542 4.63482 0.0290857 4.89985 0.0290857C5.02311 0.0290857 5.15254 0.0290857 5.28813 0.0290857C5.42373 0.0226222 5.55316 0.0193907 5.67643 0.0193907C5.80586 0.0129273 5.91371 0.00646344 6 0Z"
+                                    fill="#C8FA05" />
+                            </svg>
+                        </span>
+                        <span class="logo-K">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                                <path
+                                    d="M2.47573 0V0.193906C2.25566 0.200369 2.08738 0.226224 1.97087 0.271468C1.86084 0.31025 1.78641 0.387812 1.74757 0.504155C1.70874 0.614035 1.68932 0.78855 1.68932 1.0277V5.83656C1.68932 6.06925 1.70874 6.24377 1.74757 6.36011C1.78641 6.47645 1.86084 6.55402 1.97087 6.5928C2.08738 6.63158 2.25566 6.65743 2.47573 6.67036V6.86427C2.32686 6.85134 2.13916 6.84487 1.91262 6.84487C1.69256 6.83841 1.46926 6.83518 1.24272 6.83518C0.990291 6.83518 0.754045 6.83841 0.53398 6.84487C0.313916 6.84487 0.135922 6.85134 0 6.86427V6.67036C0.220065 6.65743 0.385113 6.63158 0.495145 6.5928C0.61165 6.55402 0.689319 6.47645 0.728153 6.36011C0.766988 6.24377 0.786408 6.06925 0.786408 5.83656V1.0277C0.786408 0.78855 0.766988 0.614035 0.728153 0.504155C0.689319 0.387812 0.61165 0.31025 0.495145 0.271468C0.385113 0.226224 0.220065 0.200369 0 0.193906V0C0.135922 0.00646344 0.313916 0.0129273 0.53398 0.0193907C0.754045 0.0258542 0.990291 0.0290857 1.24272 0.0290857C1.46926 0.0290857 1.69256 0.0258542 1.91262 0.0193907C2.13916 0.0129273 2.32686 0.00646344 2.47573 0ZM2.36893 3.21884C2.71197 3.21884 3.03236 3.25439 3.33009 3.32548C3.6343 3.39658 3.8932 3.53232 4.1068 3.73269C4.32039 3.93306 4.47249 4.23038 4.56311 4.62465L4.84466 5.84626C4.91586 6.14358 4.98058 6.35365 5.03884 6.47645C5.09709 6.5928 5.19741 6.64774 5.3398 6.64127C5.44984 6.63481 5.54045 6.59926 5.61165 6.53463C5.68932 6.46999 5.77023 6.38273 5.85437 6.27285L6 6.3795C5.87702 6.56048 5.7411 6.70914 5.59223 6.82548C5.44336 6.94183 5.23301 7 4.96116 7C4.73463 7 4.52751 6.93536 4.3398 6.80609C4.15857 6.67036 4.01942 6.38596 3.92233 5.95291L3.65048 4.75069C3.59223 4.47922 3.52427 4.24331 3.4466 4.04294C3.36893 3.84257 3.24595 3.68744 3.07767 3.57756C2.90938 3.46122 2.66019 3.40305 2.33009 3.40305H1.50485V3.21884H2.36893ZM1.68932 3.40305V3.21884C1.96116 3.21237 2.1877 3.15743 2.36893 3.05402C2.55663 2.94414 2.71197 2.81163 2.83495 2.65651L3.76699 1.47368C3.98058 1.20222 4.12621 0.972761 4.20388 0.785319C4.28155 0.597876 4.27832 0.455679 4.19417 0.358726C4.11003 0.255309 3.93204 0.200369 3.66019 0.193906V0C3.78317 0.00646344 3.90939 0.0129273 4.03884 0.0193907C4.16828 0.0193907 4.2945 0.0226222 4.41747 0.0290857C4.54692 0.0290857 4.66667 0.0290857 4.7767 0.0290857C4.94498 0.0290857 5.10032 0.0258542 5.24272 0.0193907C5.38511 0.0129273 5.50485 0.00646344 5.60194 0V0.193906C5.40129 0.21976 5.20712 0.287627 5.01942 0.397507C4.83171 0.500923 4.64401 0.668975 4.45631 0.901662L2.48544 3.40305H1.68932Z"
+                                    fill="#C8FA05" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <nav class="nav" data-aos="fade-up">
+                    <ol class="nav-bar">
+                        <li class="nav-item">
+                            <a href="#">Работники</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Заявки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Личный кабинет</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-city-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 12"
+                                    fill="none">
+                                    <path
+                                        d="M-2.54292e-07 4C-6.11631e-08 1.79086 2.01472 3.43001e-07 4.5 5.60272e-07C6.98528 7.77542e-07 9 1.79086 9 4C9 6.20914 4.5 12 4.5 12C4.5 12 -4.47421e-07 6.20914 -2.54292e-07 4Z"
+                                        fill="#B6DC06" />
+                                </svg>
+                            </div>
+                            <div class="select-city-wrapper">
+                                <select class="city-select" name="nav-item-select">
+                                    <option value="Казань">Россия</option>
+                                    <option value="Казань">Казахстан</option>
+                                    <option value="Казань">Грузия</option>
+                                    <option value="Казань">Армения</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="logo-button" data-aos="fade-left">
+                    <button id="sign-btn" class="logo-btn">Выход</button>
+                </div>
+                <div id="regModal" class="modalReg">
+                    <div class="modalReg-content">
+                        <button id="close-modal-btn" class="modal-btn">
+                            <svg fill="#C3F307" height="20px" width="20px" version="1.1" id="Capa_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 460.775 460.775" xml:space="preserve">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                        <div class="modal-title">
+                            <div class="modal-title-signIn">
+                                <button class="tab_btn active">Вход</button>
+                            </div>
+                            <div class="modal-title-signUp">
+                                <button class="tab_btn">Регистрация</button>
+                            </div>
+                        </div>
+                        <div class="tab-content active">
+                            <div class="modal-form-input">
+                                <form class="modal-form" name="modalForm" action="#" method="POST">
+                                    <div class="input-email-modal" data-aos="fade-left">
+                                        <input name="email" placeholder="Почта" type="email" required="required">
+                                    </div>
+                                    <div class="input-password-modal" data-aos="fade-left">
+                                        <input name="password" placeholder="Пароль" type="password" required="required">
+                                    </div>
+                                    <input class="input-login-btn-modal" type="submit" name="submit_btn" value="Войти">
+                                </form>
+                            </div>
+                            <div class="modal-checkbox">
+                                <div class="checkbox-modal">
+                                    <div class="checkboxSelf">
+                                        <input class="checkboxModal" type="checkbox" name="checkbox">
+                                        <span class="custom-checkbox"></span>
+                                        <div class="checkbox-modal-txt">
+                                            Сохранить пароль
+                                        </div>
+                                    </div>
+                                    <div class="modal-passwrod">
+                                        <a href="#">Забыли пароль?</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="modal-Reg-form-input">
+                                <form class="modal-Reg-form" name="modalRegForm" action="#" method="POST">
+                                    <div class="input-Reg-name-modal" data-aos="fade-left">
+                                        <input name="Modalname" placeholder="Имя" type="text" required="required">
+                                    </div>
+                                    <div class="input-Reg-surname-modal" data-aos="fade-left">
+                                        <input name="name" placeholder="Фамилия" type="text" required="required">
+                                    </div>
+                                    <div class="input-Reg-email-modal" data-aos="fade-left">
+                                        <input name="email" placeholder="Почта" type="email" required="required">
+                                    </div>
+                                    <div class="input-Reg-name-modal" data-aos="fade-left">
+                                        <input name="password" placeholder="Пароль" type="password" required="required">
+                                    </div>
+                                    <div class="input-Reg-name-modal" data-aos="fade-left">
+                                        <input name="password" placeholder="Повторите пароль" type="password"
+                                            required="required">
+                                    </div>
+                                    <input class="input-Reg-btn-modal" type="submit" name="submit_btn"
+                                        value="Регистрация">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section class="hero">
+        <div class="wrapper">
+            <div class="hero-content">
+                <div class="hero-main-txt">
+                    <div class="hero-title" data-aos="fade-right">
+                        Экономьте <span id="green-txt">до 70 % на попутной доставке</span> сборных грузов по России
+                        и СНГ
+                    </div>
+                    <div class="hero-button" data-aos="fade-right">
+                        <button id="priceButton" class="hero-btn count-btn">Рассчитать стоимость</button>
+                        <button id="orderButton" class="hero-btn order-btn">Заказать</button>
+                    </div>
+                    <div class="order-modal">
+                        <div class="order-modal-content">
+                            <button id="close-modal-order-btn" class="modal-btn">
+                                <svg fill="#C3F307" height="20px" width="20px" version="1.1" id="Capa_1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 460.775 460.775" xml:space="preserve">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="order-title">
+                                <div class="order-title-main">
+                                    Заказать машину
+                                </div>
+                                <div class="order-title-desc">
+                                    Заполните форму ниже
+                                </div>
+                            </div>
+                            <div class="order-form">
+                                <form class="modal-order-form" name="modal-order-Form" action="#" method="POST">
+                                    <div class="input-name-surname-Order-modal input-order">
+                                        <div class="input-order-title">
+                                            Введите ваше имя и фамилию
+                                        </div>
+                                        <input name="nameSurname" placeholder="Иванов Инванов" type="text"
+                                            required="required">
+                                    </div>
+                                    <div class="input-tel-Order-modal input-order">
+                                        <div class="input-order-title">
+                                            Введите ваш телефон
+                                        </div>
+                                        <input name="password" placeholder="+7 999 999 99 99" type="tel"
+                                            required="required">
+                                    </div>
+                                    <div class="input-location-Order-modal input-order">
+                                        <div class="input-order-title">
+                                            Куда нужно будет ехать
+                                        </div>
+                                        <div class="select-location-wrapper">
+                                            <select class="location-order" name="select-location-order"
+                                                required="required">
+                                                <option value="Казань">Казань</option>
+                                                <option value="Казань">Москва</option>
+                                                <option value="Казань">Челябинск</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-classAuto-Order-modal input-order">
+                                        <div class="input-order-title">
+                                            Выбрать класс авто
+                                        </div>
+                                        <div class="select-classAuto-wrapper">
+                                            <select class="classAuto-order" name="select-classAuto-order"
+                                                required="required">
+                                                <option value="Казань">Премиум класс</option>
+                                                <option value="Казань">Вип класс</option>
+                                                <option value="Казань">Обычный</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+                                    <div class="input-organization-Order-modal input-order">
+                                        <div class="input-order-title">
+                                            Организация
+                                        </div>
+                                        <input name="organization" placeholder="Не обезательно" type="text">
+                                    </div>
+                                    <input class="modal_btn" type="submit" name="submit_modal_btn" value="Заказать">
+                                </form>
+                            </div>
+                            <div class="data-agreement">
+                                Отправка заявки подразумевает обязательное согласие на обработку персональных данных
+                                соответствии с политикой комфиденциальности
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-modal">
+                        <div class="price-modal-content">
+                            <button id="close-price-modal-order-btn" class="modal-btn">
+                                <svg fill="#C3F307" height="20px" width="20px" version="1.1" id="Capa_1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 460.775 460.775" xml:space="preserve">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="price-modal-title">
+                                <div class="order-title-main">
+                                    Узнать стоимость поездки
+                                </div>
+                            </div>
+                            <div class="price-form">
+                                <form class="modal-price-form" name="modal-order-Form" action="#" method="POST">
+                                    <div class="input-classAuto-price-modal input-order">
+                                        <div class="input-order-title">
+                                            Выбор класса авто
+                                        </div>
+                                        <div class="select-price-classAuto-wrapper">
+                                            <select class="price-classAuto-price" name="select-price-classAuto-order"
+                                                required="required">
+                                                <option value="Премиум">Премиум</option>
+                                                <option value="Вип класс">Вип класс</option>
+                                                <option value="Обычный">Обычный</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-tel-price-modal input-order">
+                                        <div class="input-order-title">
+                                            Введите ваш телефон
+                                        </div>
+                                        <input id="price-tel" name="password" placeholder="+7 999 999 99 99" type="tel"
+                                            required="required">
+                                    </div>
+                                    <div class="input-regular-price-modal input-order">
+                                        <div class="input-order-title">
+                                            Регулярность
+                                        </div>
+                                        <div class="select-price-regular-wrapper">
+                                            <select class="price-regular" name="select-price-order" required="required">
+                                                <option value="Казань">Разово</option>
+                                                <option value="Казань">Постоянно</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-where-price-modal input-order">
+                                        <div class="input-order-title">
+                                            Куда
+                                        </div>
+                                        <div class="select-where-wrapper">
+                                            <select class="where-price" name="select-where-order" required="required">
+                                                <option value="Казань">Казань</option>
+                                                <option value="Челябинск">Челябинск</option>
+                                                <option value="Москва">Москва</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-sum-price-modal input-order">
+                                        <div class="input-order-title">
+                                            Итоговая цена
+                                        </div>
+                                        <input name="sum" placeholder="31 500р" type="text">
+                                    </div>
+                                    <input class="modal_btn" type="submit" name="submit_modal_btn" value="Заказать">
+                                </form>
+                            </div>
+                            <div class="data-agreement">
+                                Отправка заявки подразумевает обязательное согласие на обработку персональных данных
+                                соответствии с политикой комфиденциальности
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit">
+                        <a href="#"><img src="/src/icon/edit.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="hero-img" data-aos="fade-left">
+                    <img src="src/img/hero/hero-car.png" alt="">
+                    <div class="change-img">
+                        <div class="change-img-title">
+                            Изменить картинку
+                        </div>
+                        <div class="change-btn">
+                            <button></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="statistics">
+        <div class="wrapper">
+            <div class="statistics-content">
+                <ol class="statistics-list">
+                    <li class="statistics-item" data-aos="fade-right">
+                        <div class="statistics-number" id="green-txt">150 000</div>
+                        <div class="statistics-txt">тонн груза доставили</div>
+                        <div class="edit">
+                            <a href="#"><img src="/src/icon/edit.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="statistics-item" data-aos="fade-down">
+                        <div class="statistics-number" id="green-txt">> 1 500</div>
+                        <div class="statistics-txt">более 1 500 клиентов</div>
+                        <div class="edit">
+                            <a href="#"><img src="/src/icon/edit.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="statistics-item" data-aos="fade-down">
+                        <div class="statistics-number" id="green-txt">100</div>
+                        <div class="statistics-txt">сотрудников в штате</div>
+                        <div class="edit">
+                            <a href="#"><img src="/src/icon/edit.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="statistics-item" data-aos="fade-left">
+                        <div class="statistics-number" id="green-txt">3</div>
+                        <div class="statistics-txt">филиала в России</div>
+                        <div class="edit">
+                            <a href="#"><img src="/src/icon/edit.png" alt=""></a>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section class="car-park">
+        <div class="wrapper">
+            <div class="car-park-content">
+                <div class="car-park-title container-title" data-aos="zoom-in">
+                    Наш автопарк
+                </div>
+                <ol class="cars-list">
+                    <li class="car-item" data-aos="fade-down-right">
+                        <div class="car-img">
+                            <img src="src/img/car-park/car-1.png" alt="">
+                        </div>
+                        <div class="car-txt">
+                            <div class="car-txt-title">
+                                <a href="#">
+                                    Микроавтобусы 7-14 мест
+                                </a>
+                            </div>
+                            <div class="car-txt-desc">
+                                От 10.000р за два рейса утро-вечер почасовая оплата от 550р час
+                            </div>
+                        </div>
+                        <div class="edit">
+                            <a href="#"><img src="/src/icon/edit.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="car-item" data-aos="fade-down-left">
+                        <div class="car-img">
+                            <img src="src/img/car-park/car-1.png" alt="">
+                        </div>
+                        <div class="car-txt">
+                            <div class="car-txt-title">
+                                <a href="#">
+                                    Микроавтобусы 18-21 мест
+                                </a>
+                            </div>
+                            <div class="car-txt-desc">
+                                От 15.000р за два рейса утро-вечер почасовая оплата от 750р час
+                            </div>
+                        </div>
+                        <div class="edit">
+                            <a href="#"><img src="/src/icon/edit.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="car-item" data-aos="fade-up-right">
+                        <div class="car-img">
+                            <img src="src/img/car-park/car-2.png" alt="">
+                        </div>
+                        <div class="car-txt">
+                            <div class="car-txt-title">
+                                <a href="#">
+                                    Автобусы 28 мест
+                                </a>
+                            </div>
+                            <div class="car-txt-desc">
+                                От 20.000р за два рейса утро-вечер почасовая оплата от 950р час
+                            </div>
+                        </div>
+                        <div class="edit">
+                            <a href="#"><img src="/src/icon/edit.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="car-item" data-aos="fade-up-left">
+                        <div class="car-img">
+                            <img src="src/img/car-park/car-2.png" alt="">
+                        </div>
+                        <div class="car-txt">
+                            <div class="car-txt-title">
+                                <a href="#">
+                                    Автобусы 54 места
+                                </a>
+                            </div>
+                            <div class="car-txt-desc">
+                                От 20.000р за два рейса утро-вечер почасовая оплата от 950р час </div>
+                        </div>
+                        <div class="edit">
+                            <a href="#"><img src="/src/icon/edit.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="car-item" data-aos="fade-up">
+                        <div class="car-img">
+                            <img src="src/img/car-park/car-3.png" alt="">
+                        </div>
+                        <div class="car-txt">
+                            <div class="car-txt-title">
+                                <a href="#">
+                                    Грузовые ГАЗели разного тоннажа
+                                </a>
+                            </div>
+                            <div class="car-txt-desc">
+                                от 2.500р в час + 1250р в час за одного грузчика (при необходимости)
+                            </div>
+                        </div>
+                        <div class="edit">
+                            <a href="#"><img src="/src/icon/edit.png" alt=""></a>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section class="passenger-vehicles">
+        <div class="wrapper">
+            <div class="passenger-vehicles-content">
+                <div class="passenger-vehicles-title container-title" data-aos="zoom-in">
+                    Легковые автомобили:
+                </div>
+                <ol class="passenger-vehicles-list">
+                    <li class="passenger-vehicles-item" data-aos="fade-down-right">
+                        <div class="passenger-vehicles-img">
+                            <img src="src/img/passenger-vehicles/car-1.png" alt="">
+                        </div>
+                        <div class="passenger-vehicles-txt">
+                            <div class="passenger-vehicles-txt-title">
+                                <a href="#">
+                                    Эконом-класс
+                                </a>
+                            </div>
+                            <div class="passenger-vehicles-txt-desc">
+                                от 30.000р в месяц (в зависимости от графика работы) Почасовая оплата от 1500р
+                            </div>
+                        </div>
+                        <div class="edit">
+                            <a href="#"><img src="/src/icon/edit.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="passenger-vehicles-item" data-aos="fade-down-left">
+                        <div class="passenger-vehicles-img">
+                            <img src="src/img/passenger-vehicles/car-2.png" alt="">
+                        </div>
+                        <div class="passenger-vehicles-txt">
+                            <div class="passenger-vehicles-txt-title">
+                                <a href="#">
+                                    Бизнес-класс
+                                </a>
+                            </div>
+                            <div class="passenger-vehicles-txt-desc">
+                                от 45.000р в месяц (в зависимости от графика работы) Почасовая оплата от 2500р
+                            </div>
+                        </div>
+                        <div class="edit">
+                            <a href="#"><img src="/src/icon/edit.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="passenger-vehicles-item" data-aos="fade-up-right">
+                        <div class="passenger-vehicles-img">
+                            <img src="src/img/passenger-vehicles/car-3.png" alt="">
+                        </div>
+                        <div class="passenger-vehicles-txt">
+                            <div class="passenger-vehicles-txt-title">
+                                <a href="#">
+                                    Представительский класс
+                                </a>
+                            </div>
+                            <div class="passenger-vehicles-txt-desc">
+                                от 60.000р в месяц (в зависимости от графика работы) Почасовая оплата от 5000р
+                            </div>
+                        </div>
+                        <div class="edit">
+                            <a href="#"><img src="/src/icon/edit.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="passenger-vehicles-item" data-aos="fade-up-left">
+                        <div class="passenger-vehicles-img">
+                            <img src="src/img/passenger-vehicles/car-4.png" alt="">
+                        </div>
+                        <div class="passenger-vehicles-txt">
+                            <div class="passenger-vehicles-txt-title">
+                                <a href="#">
+                                    Премиум класс
+                                </a>
+                            </div>
+                            <div class="passenger-vehicles-txt-desc">
+                                от 75.000р в месяц (в зависимости от графика работы) Почасовая оплата от 7500р
+                            </div>
+                        </div>
+                        <div class="edit">
+                            <a href="#"><img src="/src/icon/edit.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li class="passenger-vehicles-item" data-aos="fade-up">
+                        <div class="passenger-vehicles-img">
+                            <img src="src/img/passenger-vehicles/car-5.png" alt="">
+                        </div>
+                        <div class="passenger-vehicles-txt">
+                            <div class="passenger-vehicles-txt-title">
+                                <a href="#">
+                                    Внедорожники
+                                </a>
+                            </div>
+                            <div class="passenger-vehicles-txt-desc">
+                                от 100.000 в месяц (в зависимости от графика работы, марки авто и объема
+                                двигателя).Почасовая оплата от 10.000р
+                            </div>
+                        </div>
+                        <div class="edit">
+                            <a href="#"><img src="/src/icon/edit.png" alt=""></a>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="wrapper">
+            <div class="about-content">
+                <div class="about-title" data-aos="zoom-in">
+                    Мы <span id="green-txt">ценим</span> время и комфорт <span id="green-txt">своих клиентов</span>
+                </div>
+                <ol class="about-list">
+                    <li class="about-item" data-aos="fade-right">
+                        <div class="about-item-img">
+                            <img src="src/img/about/about-1.png" alt="">
+                        </div>
+                        <div class="about-item-txt">
+                            <div class="about-item-txt-title">
+                                Электоронный документооборот
+                            </div>
+                            <div class="about-item-txt-title-desc">
+                                Быстро согласовывает любые документы и пересылаем вашему бухгалтеру с помощью ЭЦП
+                            </div>
+                        </div>
+                    </li>
+                    <li class="about-item" data-aos="fade-up">
+                        <div class="about-item-img">
+                            <img src="src/img/about/about-2.png" alt="">
+                        </div>
+                        <div class="about-item-txt">
+                            <div class="about-item-txt-title">
+                                Комплексная работа
+                            </div>
+                            <div class="about-item-txt-title-desc">
+                                Берем на себя все организационные и документальные вопросыс растоможку,доставку товаров
+                            </div>
+                        </div>
+                    </li>
+                    <li class="about-item" data-aos="fade-up">
+                        <div class="about-item-img">
+                            <img src="src/img/about/about-3.png" alt="">
+                        </div>
+                        <div class="about-item-txt">
+                            <div class="about-item-txt-title">
+                                Соблюдение сроков
+                            </div>
+                            <div class="about-item-txt-title-desc">
+                                Несем материальную ответственность за нарушение сроков перевозки/поставки по нашей вине.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="about-item" data-aos="fade-left">
+                        <div class="about-item-img">
+                            <img src="src/img/about/about-4.png" alt="">
+                        </div>
+                        <div class="about-item-txt">
+                            <div class="about-item-txt-title">
+                                Удобное отслеживание заказов
+                            </div>
+                            <div class="about-item-txt-title-desc">
+                                Один звонок личному менеджеру и вы знаете,где сейчас едет ваш груз.
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section class="promo">
+        <div class="wrapper">
+            <div class="promo-content" data-aos="fade-up">
+                <div class="promo-rent" data-aos="fade-right">
+                    <div class="promo-rent-icon">
+                        <img src="src/icon/rent-icon.png" alt="">
+                    </div>
+                    <div class="promo-rent-txt">
+                        Все траспортные средства сдаются в аренду <span>только с водителем!</span>
+                    </div>
+                </div>
+                <div class="promo-img">
+                    <img src="src/img/promo/promo-1.png" alt="">
+                </div>
+                <div class="promo-payment" data-aos="fade-left">
+                    <div class="promo-payment-icon">
+                        <img src="src/icon/payment-icon.png" alt="">
+                    </div>
+                    <div class="promo-payment-txt">
+                        Оплата производится <span>удобным дня заказчика способом</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="review">
+        <div class="wrapper">
+            <div class="review-content">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide reviewSlide">
+                            <div class="review-header">
+                                <div class="review-img">
+                                    <img src="src/review/img.jpeg" alt="">
+                                </div>
+                                <div class="review-name">
+                                    Alexander.R.S
+                                </div>
+                            </div>
+                            <div class="review-txt">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit provident maxime facilis
+                                sed voluptates sint quam facere, fugit minus. Quos.
+                            </div>
+                            <div class="review-stars">
+                                <img src="src/icon/stars.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide reviewSlide">
+                            <div class="review-header">
+                                <div class="review-img">
+                                    <img src="src/review/img.jpeg" alt="">
+                                </div>
+                                <div class="review-name">
+                                    Alexander.R.S
+                                </div>
+                            </div>
+                            <div class="review-txt">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit provident maxime facilis
+                                sed voluptates sint quam facere, fugit minus. Quos.
+                            </div>
+                            <div class="review-stars">
+                                <img src="src/icon/stars.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide reviewSlide">
+                            <div class="review-header">
+                                <div class="review-img">
+                                    <img src="src/review/img.jpeg" alt="">
+                                </div>
+                                <div class="review-name">
+                                    Alexander.R.S
+                                </div>
+                            </div>
+                            <div class="review-txt">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit provident maxime facilis
+                                sed voluptates sint quam facere, fugit minus. Quos.
+                            </div>
+                            <div class="review-stars">
+                                <img src="src/icon/stars.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide reviewSlide">
+                            <div class="review-header">
+                                <div class="review-img">
+                                    <img src="src/review/img.jpeg" alt="">
+                                </div>
+                                <div class="review-name">
+                                    Alexander.R.S
+                                </div>
+                            </div>
+                            <div class="review-txt">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit provident maxime facilis
+                                sed voluptates sint quam facere, fugit minus. Quos.
+                            </div>
+                            <div class="review-stars">
+                                <img src="src/icon/stars.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide reviewSlide">
+                            <div class="review-header">
+                                <div class="review-img">
+                                    <img src="src/review/img.jpeg" alt="">
+                                </div>
+                                <div class="review-name">
+                                    Alexander.R.S
+                                </div>
+                            </div>
+                            <div class="review-txt">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit provident maxime facilis
+                                sed voluptates sint quam facere, fugit minus. Quos.
+                            </div>
+                            <div class="review-stars">
+                                <img src="src/icon/stars.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide reviewSlide">
+                            <div class="review-header">
+                                <div class="review-img">
+                                    <img src="src/review/img.jpeg" alt="">
+                                </div>
+                                <div class="review-name">
+                                    Alexander.R.S
+                                </div>
+                            </div>
+                            <div class="review-txt">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit provident maxime facilis
+                                sed voluptates sint quam facere, fugit minus. Quos.
+                            </div>
+                            <div class="review-stars">
+                                <img src="src/icon/stars.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-navigation">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feedback">
+        <div class="wrapper">
+            <div class="feedback-content">
+                <div class="feedback-img" data-aos="fade-right">
+                    <img src="src/img/feedback/feedback-1.png" alt="">
+                </div>
+                <div class="feedback-form" data-aos="fade-left">
+                    <form class="feedback-form" name="feedback" action="#" method="POST">
+                        <div class="feedback-title" data-aos="fade-down">
+                            Остались вопросы? Задайте их нашему менеджеру
+                        </div>
+                        <div class="input-name" data-aos="fade-left">
+                            <input name="name" placeholder="Ваше имя" type="text" required="required">
+                        </div>
+                        <div class="input-email" data-aos="fade-left">
+                            <input name="email" placeholder="E-mail" type="email" required="required">
+                        </div>
+                        <div class="input-tel" data-aos="fade-left">
+                            <input name="tel" placeholder="Телефон" type="tel" required="required">
+                        </div>
+                        <div class="input-text" data-aos="fade-left">
+                            <textarea name="message" placeholder="Ваше сообщение"></textarea>
+                        </div>
+                        <div class="input-submit">
+                            <input type="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="foooter-contacts">
+            <div class="foooter-contacts-title">
+                Наши контакты
+            </div>
+            <div class="foooter-contacts-address">
+                Альметьевск, улица Ленина 101 Принимаем ежедневно с 9 до 21:00
+            </div>
+            <div class="foooter-contacts-tel">
+                <a href="tel:+7 (987) 422-10-01">
+                    +7 (987) 422-10-01
+                </a>
+            </div>
+        </div>
+        <div id="map" class="footer-map map">
+            <script src="https://api-maps.yandex.ru/v3/?apikey=339c5fba-2f05-426a-b156-ad18c8560fa4&lang=ru_RU"></script>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="src/scripts/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

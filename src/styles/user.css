@@ -72,6 +72,20 @@ td {
 }
 
 
+#change-select {
+    cursor: pointer;
+    width: 30%;
+    background: #2B3036;
+    border: none;
+    appearance: none;
+    color: rgb(255, 255, 255);
+    font-family: "Source Sans 3";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 thead {
     margin-bottom: 20px;
 } 
