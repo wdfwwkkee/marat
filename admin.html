@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>user</title>
+    <title>admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -17,7 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:wght@700&family=Pridi:wght@400;700&family=Source+Sans+3:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="src/styles/style.css">
-    <link rel="stylesheet" href="src/styles/user.css">
+    <link rel="stylesheet" href="src/styles/admin.css">
 </head>
 
 <body>
@@ -63,28 +63,10 @@
                             <a href="#">Заявки</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#">Работники</a>
+                            <a href="#">Часы</a>
                         </li>
                         <li class="nav-item">
                             <a href="#">Гланая</a>
-                        </li>
-                        <li class="nav-item">
-                            <div class="nav-city-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 12"
-                                    fill="none">
-                                    <path
-                                        d="M-2.54292e-07 4C-6.11631e-08 1.79086 2.01472 3.43001e-07 4.5 5.60272e-07C6.98528 7.77542e-07 9 1.79086 9 4C9 6.20914 4.5 12 4.5 12C4.5 12 -4.47421e-07 6.20914 -2.54292e-07 4Z"
-                                        fill="#B6DC06" />
-                                </svg>
-                            </div>
-                            <div class="select-city-wrapper">
-                                <select class="city-select" name="nav-item-select">
-                                    <option value="Казань">Россия</option>
-                                    <option value="Казань">Казахстан</option>
-                                    <option value="Казань">Грузия</option>
-                                    <option value="Казань">Армения</option>
-                                </select>
-                            </div>
                         </li>
                     </ol>
                 </nav>
@@ -98,46 +80,34 @@
             <thead>
                 <tr>
                     <th class="title-col" scope="col">Маршрут</th>
-                    <th class="title-col" scope="col">Водитель</th>
-                    <th class="title-col" scope="col">Класс</th>
-                    <th class="title-col" scope="col">Статус</th>
+                    <th class="title-col" scope="col">Машина</th>
+                    <th class="title-col" scope="col">Часы</th>
+                    <th class="title-col" scope="col">Редактирование</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th scope="row">Альметьевск - Казань</th>
-                    <td>Максим Филипов</td>
                     <td>Бизнес-класс</td>
+                    <td>15ч</td>
                     <td>
-                        <select name="statusSelect" id="status-select">
-                            <option value="1">Выполняется</option>
-                            <option value="2">Выполнена</option>
-                            <option value="3">Принята</option>
-                        </select>
+                        <a class="change" href="#">Удалить/редактировать</a>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Альметьевск - Казань</th>
-                    <td>Максим Филипов</td>
-                    <td>Бизнес-класс</td>
+                    <td>Внедорожник</td>
+                    <td>15ч</td>
                     <td>
-                        <select name="statusSelect" id="status-select">
-                            <option value="1">Выполняется</option>
-                            <option value="2">Выполнена</option>
-                            <option value="3">Принята</option>
-                        </select>
+                        <a class="change" href="#">Удалить/редактировать</a>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">Альметьевск - Казань</th>
-                    <td>Максим Филипов</td>
-                    <td>Бизнес-класс</td>
+                    <td>Внедорожник</td>
+                    <td>15ч</td>
                     <td>
-                        <select name="statusSelect" id="status-select">
-                            <option value="1">Выполняется</option>
-                            <option value="2">Выполнена</option>
-                            <option value="3">Принята</option>
-                        </select>
+                        <a class="change" href="#">Удалить/редактировать</a>
                     </td>
                 </tr>
             </tbody>
