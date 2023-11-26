@@ -11,6 +11,7 @@
 
 
 .main {
+    height: 50vh;
     background: #2B3036;
     color: #FFF;
     font-family: Playfair Display;
@@ -48,7 +49,7 @@ td {
     top: 40px;
     right: 0;
     width: 1px;
-    height: 210px;
+    height: 30vh;
     background: rgba(255, 255, 255, 0.30);
 }
 
