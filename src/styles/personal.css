@@ -1,0 +1,62 @@
+/*-----------------header------------------------*/
+
+
+
+.header {
+    padding: 20px 50px;
+    background: #11181E;
+}
+
+/*-----------------main------------------------------*/
+
+
+
+.wrapper {
+    max-width: 1200px;
+}
+
+.main {
+    height: 50vh;
+    color: #FFF;
+    font-family: Playfair Display;
+    font-size: 25px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.nav-bar {
+    justify-content: space-between;
+}
+
+
+.personal-photo img {
+    width: 100%;
+}
+
+.main-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+
+.personal-data {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 50px;
+    column-gap: 30px;
+}
+
+.per-data-item {
+    grid-column: span 6;
+}
+
+.per-data-item input {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    outline: none;
+}
+
