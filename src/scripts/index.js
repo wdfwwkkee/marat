@@ -6,9 +6,6 @@ var swiper = new Swiper(".mySwiper", {
     },
  });
 
-
-
-
 const signUpButton = document.getElementById("sign-btn");
 const modalReg = document.getElementById("regModal");
 const closeModalButton = document.getElementById("close-modal-btn");
@@ -18,31 +15,8 @@ const all_content = document.querySelectorAll(".tab-content");
 const orderButton = document.getElementById("orderButton");
 const orderModal = document.querySelector(".order-modal");
 const orderCloseModal = document.getElementById('close-modal-order-btn');
-const priceButton = document.getElementById('priceButton');
-const priceModal = document.querySelector('.price-modal');
 const closePriceModal = document.getElementById('close-price-modal-order-btn');
 
-
-
-
-
-
-
-priceButton.addEventListener('click', () => {
-  priceModal.classList.add('open');
-  html.classList.add("lock");
-})
-
-closePriceModal.addEventListener("click", ()=> {
-  priceModal.classList.remove("open");
-  html.classList.remove("lock");
-})
-
-
-orderButton.addEventListener('click', () => {
-  orderModal.classList.add('open');
-  html.classList.add("lock");
-})
 
 
 tabButton.forEach((tab, index)=> {
@@ -66,10 +40,7 @@ closeModalButton.addEventListener("click", function() {
   html.classList.remove("lock");
 })
 
-orderCloseModal.addEventListener('click', ()=> {
-  orderModal.classList.remove('open');
-  html.classList.remove('lock');
-})
+
 
 
 
